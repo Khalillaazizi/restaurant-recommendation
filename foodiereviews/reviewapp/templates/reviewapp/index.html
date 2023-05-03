@@ -1,0 +1,35 @@
+{% extends 'reviewapp/bases.html' %}
+  
+{% block title %}Add New Employee Records{% endblock title %}
+  
+{% block content %}
+<div class="col-md-12">    
+    <form method="POST" class="post-form" action="/addnew/">  
+        {% csrf_token %}  
+        <div class="container">  
+            <div class="col-12">  
+            <h3>Enter Details</h3>  
+            </div>    
+         
+            <div class="mb-3"> 
+                <label>category:</label>  
+                {{ form.category }}   
+            </div> 
+            <div class="mb-3"> 
+                <label>restaurant text:</label>  
+                {{ form.restaurant_text }}   
+            </div>  
+            <div class="mb-3"> 
+                <label>restaurant_address:</label>  
+                {{ form.restaurant_address }}   
+            </div>
+            
+            <div class="mb-3"> 
+                <button type="submit" class="btn btn-primary">Submit</button>    
+            </div> 
+        </div>  
+        </form>  
+        
+    </form>  
+</div> 
+{% endblock content %} 

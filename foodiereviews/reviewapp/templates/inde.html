@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>La préfecture de Marrakech</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'asset/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'asset/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'reviewapp/asset/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'reviewapp/asset/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'reviewapp/asset/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'reviewapp/asset/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'reviewapp/asset/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'reviewapp/asset/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'reviewapp/asset/css/stylee.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eBusiness - v4.8.0
+  * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+       <img src="{% static 'reviewapp/img/restau.png' %}" alt="" class="img-fluid" ></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">À Propos</a></li>
+          <li><a class="nav-link scrollto" href="#services">prestations de service</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portefeuille</a></li>
+          <li><a href="/reviewapp/home">Without Login</a></li>
+          <li><a href="/reviewapp/index">restaurant</a></li>
+          <li class="dropdown"><a href="#"><span>Menu déroulant</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Menu déroulant</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#about">À Propos</a></li>
+                  <li><a href="#services">prestations de service</a></li>
+                  <li><a href="#portfolio">Portefeuille</a></li>
+                  <li><a href="/accounts/login">Connexion</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background: url(../img/admin.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Le meilleur site de recommandation pour la nourriture</h2>
+                <p class="animate__animated animate__fadeInUp">Listen to your tongue</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp"> Commencer</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background: url(../img/admin.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">أفضل موقع توصية للطعام</h2>
+                <p class="animate__animated animate__fadeInUp">استمع إلى لسانك</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">بدأ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background: url(../img/admin.jpg)">  
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Best restaurant recommendation site For Food</h2>
+                <p class="animate__animated animate__fadeInUp">Listen to your tongue</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <div id="about" class="about-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>À propos de Site</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- single-well start-->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-left">
+              <div class="single-well">
+                <a href="#">
+                  <img src="{% static 'reviewapp/img/foood.webp' %}" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- single-well end-->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-middle">
+              <div class="single-well">
+                <a href="#">
+                  <h4 class="sec-head">The Little Eatery</h4>
+                </a>
+                <p>
+                  The Little Eatery vous permet de regrouper toutes les informations concernant votre restaurant au même endroit. Vous pouvez donc y mettre une carte ou les directions pour vous trouver, vos menus, vos prix, votre histoire… bref, tout ce que vous désirez.
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> 	 Tanger-Assilah
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    M'diq-Fnideq
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Rabat
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Salé
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Skhirate-Témara
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Agadir 
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Inezgane-Aït Melloul
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Marrakech
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Fès
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i>    Meknès
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- End col-->
+        </div>
+      </div>
+    </div><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <div id="services" class="services-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline services-head text-center">
+              <h2>Our Services</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <!-- Start Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="bi bi-briefcase"></i>
+                  </a>
+                  <h4>	Division des Systèmes d’Information de Communication et de Gestion.</h4>
+
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="bi bi-card-checklist"></i>
+                  </a>
+                  <h4>✓	Division du budget et des marchés.</h4>
+
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="bi bi-bar-chart"></i>
+                  </a>
+                  <h4>✓	Division des ressources humaines et des moyens généraux.</h4>
+
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="bi bi-binoculars"></i>
+                  </a>
+                  <h4>✓	Division des collectivités locales. </h4>
+
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <!-- End Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="bi bi-brightness-high"></i>
+                  </a>
+                  <h4>✓	Division du Développements rural.</h4>
+
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <!-- End Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                    <i class="bi bi-calendar4-week"></i>
+                  </a>
+                  <h4>✓	Division des affaires économiques et de la coordination.</h4>
+
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Services Section -->
+
+    <!-- ======= Team Section ======= -->
+    
+
+    <!-- ======= Rviews Section ======= -->
+    <div class="reviews-area">
+      <div class="row g-0">
+        <div class="col-lg-6">
+          <img src="{% static 'reviewapp/img/fofoi.jpg' %}" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-6 work-right-text d-flex align-items-center">
+          <div class="px-5 py-5 py-lg-0">
+            <h2>Pour les coordonnées</h2>
+            
+            <a href="#contact" class="ready-btn scrollto">Contactez_Nous</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Rviews Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <div id="portfolio" class="portfolio-area area-padding fix">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>Notre Portefeuille</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row wesome-project-1 fix">
+          <!-- Start Portfolio -page -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Tout</li>
+              <li data-filter=".filter-app">Moroccan</li>
+              <li data-filter=".filter-card">French</li>
+              <li data-filter=".filter-web">Rest of the world</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row awesome-project-content portfolio-container">
+
+          <!-- portfolio-item start -->
+          <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item">
+            <div class="single-awesome-project">
+              <div class="awesome-img">
+                <a href="#"><img src="{% static 'reviewapp/img/mama.webp' %}" alt="" /></a>
+                <div class="add-actions text-center">
+                  <div class="project-dec">
+                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{% static 'reviewapp/img/mama.webp' %}">
+                      <h4>Climatiseur</h4>
+                      <span>Achats possibles</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- portfolio-item end -->
+
+          <!-- portfolio-item start -->
+          <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
+            <div class="single-awesome-project">
+              <div class="awesome-img">
+                <a href="#"><img src="{% static 'reviewapp/img/rest.jpg' %}" alt="" /></a>
+                <div class="add-actions text-center">
+                  <div class="project-dec">
+                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{% static 'reviewapp/img/rest.jpg' %}">
+                      <h4>Imprimante</h4>
+                      <span>Achats possibles</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- portfolio-item end -->
+
+          <!-- portfolio-item start -->
+          <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
+            <div class="single-awesome-project">
+              <div class="awesome-img">
+                <a href="#"><img src="{% static 'reviewapp/img/fre.webp' %}" alt="" /></a>
+                <div class="add-actions text-center">
+                  <div class="project-dec">
+                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{% static 'reviewapp/img/fre.webp' %}">
+                      <h4>Ordinateur</h4>
+                      <span>Achats possibles</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- portfolio-item end -->
+
+          <!-- portfolio-item start -->
+
+          <!-- portfolio-item end -->
+
+          <!-- portfolio-item start -->
+
+          <!-- portfolio-item end -->
+
+          <!-- portfolio-item start -->
+
+          <!-- portfolio-item end -->
+
+        </div>
+      </div>
+    </div><!-- End Portfolio Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    
+    <!-- ======= Testimonials Section ======= -->
+    
+
+    <!-- ======= Blog Section ======= -->
+    <div id="blog" class="blog-area">
+      <div class="blog-inner area-padding">
+        <div class="blog-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Latest News</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start Left Blog -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="single-blog">
+                <div class="single-blog-img">
+                  <a href="blog.html">
+                    <img src="{% static 'reviewapp/img/moro.jpg' %}" alt="">
+                  </a>
+                </div>
+                <div class="blog-meta">
+                  <span class="comments-type">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="#">2 comments</a>
+                  </span>
+                  <span class="date-type">
+                    <i class="fa fa-calendar"></i>2022-07-26 / 10:07:22
+                  </span>
+                </div>
+                <div class="blog-text">
+                  
+                  <p>
+                    Moroccan Vendor Impresses Tourist with Fluent English in Marrakech
+                  </p>
+                </div>
+
+              </div>
+              <!-- Start single blog -->
+            </div>
+            <!-- End Left Blog-->
+            <!-- Start Left Blog -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="single-blog">
+                <div class="single-blog-img">
+                  <a href="blog.html">
+                    <img src="{% static 'reviewapp/img/bank.jpg' %}" alt="">
+                  </a>
+                </div>
+                <div class="blog-meta">
+                  <span class="comments-type">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="#">13 comments</a>
+                  </span>
+                  <span class="date-type">
+                    <i class="fa fa-calendar"></i>2022-11-22 / 10:10:16
+                  </span>
+                </div>
+                <div class="blog-text">
+                 
+                  <p>
+                    World Bank: Morocco’s Food Inflation Is Second Lowest in North Africa
+                  </p>
+                </div>
+
+              </div>
+              <!-- Start single blog -->
+            </div>
+            <!-- End Left Blog-->
+            <!-- Start Right Blog-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="single-blog">
+                <div class="single-blog-img">
+                  <a href="blog.html">
+                    <img src="{% static 'reviewapp/img/exp.jpg' %}" alt="">
+                  </a>
+                </div>
+                <div class="blog-meta">
+                  <span class="comments-type">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="#">10 comments</a>
+                  </span>
+                  <span class="date-type">
+                    <i class="fa fa-calendar"></i>2022-11-30 / 09:10:16
+                  </span>
+                </div>
+                <div class="blog-text">
+                  <p>
+                    Experience This Easy, Best-Tasting Flourless Chocolate Cake
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <!-- End Right Blog-->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Blog Section -->
+
+    <!-- ======= Suscribe Section ======= -->
+    <div class="suscribe-area">
+      <div class="container">
+        <div class="row">
+         
+          </div>
+        </div>
+      </div>
+    </div><!-- End Suscribe Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Contactez_Nous</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-phone"></i>
+                  <p>
+                    Numero de Telephone: 05 24 43 20 03<br>
+                    <span>Lundi-Vendredi (9h-17h)</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-envelope"></i>
+                  <p>
+                    Adresse Email: TheLittleEatery@gmail.com<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>
+                    Adresse: AbwaB Gueliz ,Tawhid2 ,A22<br>
+                    <span>Av. 11 Janvier Daoudiate-Marrakech</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <!-- Start Google Map -->
+            <div class="col-md-6">
+              <!-- Start Map -->
+              <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=best%20restaurant,amarrakech&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+              <!-- End Map -->
+            </div>
+            <!-- End Google Map -->
+
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="text-center"><button type="submit">envoyer le message</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <div class="footer-logo">
+                  <h2><span>TheLittle</span>Eatery</h2>
+                </div>
+                <div class="footer-icons">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>information</h4>
+
+                <div class="footer-contacts">
+                  <p><span>Numero de Telephone:</span> 05 24 43 20 03</p>
+                  <p><span>Adresse Email:</span> TheLittleEatery@gmail.com@gmail.com</p>
+                  <p><span>Les horaires:</span> Lundi-Vendredi (9h-17h)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>Instagram</h4>
+                <div class="flicker-img">
+                  <a href="#"><img src="{% static 'reviewapp/img/marfood.jpg' %}" alt=""></a>
+                  <a href="#"><img src="{% static 'reviewapp/img/foo.jpg' %}" alt=""></a>
+                  <a href="#"><img src="{% static 'reviewapp/img/fooood.jpg' %}" alt=""></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-area-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright text-center">
+              <p>
+                &copy; Copyright <strong>TheLittleEatery</strong>. All Rights Reserved
+              </p>
+            </div>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+            -->
+              Designed by <a href="https://bootstrapmade.com/">TheLittleEatery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'reviewapp/asset/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'reviewapp/asset/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'reviewapp/asset/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'reviewapp/asset/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'reviewapp/asset/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'reviewapp/asset/js/main.js' %}"></script>
+
+</body>
+
+</html>
