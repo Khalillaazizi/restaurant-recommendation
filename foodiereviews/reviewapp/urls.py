@@ -10,11 +10,16 @@ urlpatterns = [
     
     path('addnew/',views.addnew, name='addnew'),
     
+    path('signup', views.handleSignup, name='handleSignup'),
+    
+    
+    
     path('home/', views.home, name='home'),
     
     
     path('resto/<int:restaurant_id>/', views.details, name='details'),
-
+    
+    path('delete/<int:id>', views.destroy, name='destroyer'),
     
     path('resto/<int:restaurant_id>/add/', views.add, name='add'),
 

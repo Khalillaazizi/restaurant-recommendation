@@ -8,20 +8,20 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
 
     <div class="content-container container">
         
-        <!--RESTAURANT SUMMARY-->
+      
         <div class="row">
             <div id="restaurant-summary" class="col card border-0 shadow mb-4">
                 <div class="card-body">
                     
-                    <!-- Back button -->
+                  
                     <a href="{% url 'reviewapp:home'%}" class="back-button">
                         <i class="fas fa-arrow-circle-left"></i>
                     </a>
 
-                    <!-- Title -->
+                  
                     <h1>{{restaurant.restaurant_text}}</h1>
 
-                    <!-- Location -->
+                   
                     <label class="review-liner">
                         <span style="font-size: 1.5em;">
                             <i class="fas fa-map-marker-alt" style="color:cornflowerblue;" ></i>
@@ -29,12 +29,11 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                         <strong>{{ restaurant.restaurant_address }}</strong>
                     </label>
 
-                    <!-- Category -->
+                  
                     <label class="review-liner">
                         <p><span class="badge badge-pill badge-primary category"><strong>{{ restaurant.category.category_text }}</strong></span></p>
                     </label>
                     
-                    <!-- Average rating -->
                     <label class="review-liner">
                         <div class="rate">
                             {% for i in restaurant.rating|rjust:restaurant.rating %}
@@ -43,7 +42,7 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                         </div>
                     </label>
 
-                    <!-- Average price -->
+                   
                     <label class="review-liner">
                         <div class="price">
                             {% for i in restaurant.pricing|rjust:restaurant.pricing %}
@@ -52,20 +51,19 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                         </div>
                     </label>
                     
-                    <!-- Reviews count -->
+                   
                     <label class="review-liner">    
                         <strong>({{ restaurant.review_set.count }} reviews)</strong>
                     </label>
                 </div>
             </div>        
         </div>
-        
-        <!--ADD REVIEW-->
+      
         <a href="{% url 'reviewapp:add' restaurant.id %}" id="add-review" class="btn btn-lg btn-block">
             <strong>Add a Review!</strong>
         </a>
 
-        <!--ALL REVIEWS-->
+      
         
         {% if restaurant.review_set.all %}
             {% for review in restaurant.review_set.all|dictsortreversed:"pk" %}
@@ -95,7 +93,7 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                             <h3>{{ review.review_title }}</h3>
                             {{review.review_description}}
                             
-                            <!--Likes-->
+                            
                             <div id="rl{{ review.id }}" class="row">
                                 <div class="col-1">
                                     {% if review.id in user_liked_reviews %}
@@ -117,10 +115,10 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                             </div>
                             <hr>
 
-                            <!-- COMMENTS -->
+                            
                             <div>
                                 
-                                <!-- ADD COMMENT -->
+                               
                                 <div class="row row-comment-reply">
                                     <span class="user-icon-small col"><i class="fas fa-user-circle"></i></span>
                                     <form action="#" method="post" class="col-11 comment_form" onsubmit="addComment(this); return false;">
@@ -130,7 +128,7 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                                     </form>
                                 </div>
 
-                                <!-- CURRENT COMMENTS -->
+                             
                                 <div id="rc{{ review.id }}">
                                     {% for comment in review.comment_set.all|dictsortreversed:"pk" %}
                                         <div>
@@ -144,14 +142,14 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
                                                 </div>
                                             </div>
                                             
-                                            <!-- OPTIONS -->
+                                           
                                             <div id="cc{{ comment.id }}" class="replies-with-comment-options">
                                                 <div class="comment-options">
                                                     <a href="#" onclick="createAddReply({{ comment.id }}, this); return false;">Reply</a>
                                                 </div>
                                             </div>
 
-                                            <!-- CURRENT REPLIES -->
+                                         
                                             <div id="c{{ comment.id }}" class="replies">
                                                 {% for reply in comment.reply_set.all|dictsortreversed:"pk" %}
                                                     <div class="row row-comment-reply">
@@ -183,10 +181,10 @@ style="width:100%; min-height: 100vh; background:url('/static/reviewapp/images/{
     </div>
 </div>
 
-<!--SAMPLE COMMENT REPLY LIKE-->
+
 {% include 'reviewapp/components_restaurant_details.html' %}
 
-<!--CSS & JS-->
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'reviewapp/style/restaurantdetails.css' %}" />
 {% load static %}

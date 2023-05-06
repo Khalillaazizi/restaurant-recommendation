@@ -1,5 +1,5 @@
 from django.forms import ModelForm, Textarea
-from .models import Review,Restaurant
+from .models import Review,Restaurant,Category
 from django import forms
 from .models import User
 

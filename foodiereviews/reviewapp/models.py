@@ -96,4 +96,13 @@ class Like(models.Model):
         return string
 
 
+class booking(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    subject = models.TextField(default='')
+    message = models.TextField()
+    date = models.DateTimeField
+    restaurant = models.ForeignKey(Restaurant,on_delete=models.CASCADE)
     
+    def __str__(self):
+     return self.name

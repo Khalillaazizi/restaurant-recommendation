@@ -2,25 +2,25 @@
 <html>
 
 <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Foodie Reviews</title>
+    <title>TheLittleEatery</title>
 
-    <!--CSS-->
+    
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'reviewapp/style/style.css' %}">
-    <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!--Font-->
+ 
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <!--Font Awesome Icons-->
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- JavaScript -->
+
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -32,14 +32,13 @@
 
     <main>
         <nav class="navbar-foodie navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="/reviewapp">
-                <img src="/static/reviewapp/images/frlogo3.png" height="40px" alt="foodie reviews">
+            <a class="navbar-brand" >
+                <img src="/static/reviewapp/images/logo.png" height="320px" alt="foodie reviews">
             </a>
 
             <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="{% url 'reviewapp:home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'reviewapp:home' %}"style="color: gold;">Home</a></li>
             </ul>
-
             {% if user.is_authenticated %}
             <span class="navbar-text" style="margin-right:20px">Hello, {{user.username}}!</span>
             <a href="/accounts/logout"><button class="btn btn-info my-2 my-sm-0 login" style="font-weight: 500">Log
@@ -61,6 +60,7 @@
         font-weight: bold;
         color:#333;
         background-color:white;
+        height:120px;
     }
     .nav-item{
         padding: 3px 40px;

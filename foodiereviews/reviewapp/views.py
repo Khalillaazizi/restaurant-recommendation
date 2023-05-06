@@ -1,12 +1,46 @@
 from .models import *
 from .forms import *
-from django.shortcuts import render, get_object_or_404,redirect
+from django.shortcuts import render, get_object_or_404,redirect,HttpResponse
 from django.urls import reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.contrib import messages
+
+def handleSignup(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        fname = request.POST['fname1']
+        lname = request.POST['lname1']
+        email = request.POST['email1']
+        password1 = request.POST['password2']
+        password2 = request.POST['password4']
+        if len(username)>10:
+            messages.error(request,"username must be be under 10 character")
+            return redirect('/')
+
+        if not username.isalnum():
+            messages.error(request, "username must be contain letters and numbers")
+            return redirect('/')
+
+        if password1!=password2:
+            messages.error(request, "password doesnt match")
+            return redirect('/')
+
+        myuser = User.objects.create_user(username,email,password1)
+        myuser.first_name = fname
+        myuser.last_name = lname
+        myuser.save()
+        messages.success(request,"Your account is successfully created")
+        return redirect('/')
+
+    else:
+        return HttpResponse('404 not found')
+
+
+
 
 def inde(request):
     return render(request, 'inde.html')
@@ -179,7 +213,7 @@ class LikeAdd(APIView):
         return Response(data)
 
 
-# reviewapp/api/restaurants/list
+
 class GetRestaurantsByCategory(APIView):
     authentication_classes = []
     permission_classes = []
@@ -215,7 +249,7 @@ class GetRestaurantsByCategory(APIView):
             'restaurants': restaurants
         }
         return Response(data)
-
+@login_required
 def index(request):
     Restaurants = Restaurant.objects.all()
     return render(request,"reviewapp/show.html",{'Restaurants':Restaurants})
@@ -233,3 +267,8 @@ def addnew(request):
     else:  
         form = RestaurantForm()  
     return render(request,'reviewapp/index.html',{'form':form})
+
+def destroy(request, id):  
+    Restaurants = Restaurant.objects.get(id=id)  
+    Restaurants.delete()  
+    return redirect('/') 

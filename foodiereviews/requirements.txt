@@ -1,4 +1,4 @@
 djangorestframework
-markdown
+django-authority
 django-filter
 django-widget-tweaks

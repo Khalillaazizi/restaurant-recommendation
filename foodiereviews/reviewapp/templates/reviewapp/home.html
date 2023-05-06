@@ -4,31 +4,39 @@
 
 {% load static %}
 <div id="category-banner" class="text-center">
-    <div class="select-wrapper">
-        <select id="category-dropdown" onchange="getRestaurants(this.value);">
-            <option selected value="0">All Cuisines</option>
-            {% for c in categories %}
-            <option value="{{ c.id }}">{{ c.category_text }}</option>
-            {% endfor %}
-        </select>
-        <span><i class="fas fa-chevron-circle-down"></i></span>
+    <div class="select-wrapper" style="display: inline-block;">
+      <select id="category-dropdown" onchange="getRestaurants(this.value);">
+        <option selected value="0">Best in Marrakech</option>
+        {% for c in categories %}
+        <option value="{{ c.id }}">{{ c.category_text }}</option>
+        {% endfor %}
+      </select>
+      <span><i class="fas fa-chevron-circle-down"></i></span>
     </div>
+    <div class="video-container" style="display: inline-block; margin-left: 1200px; margin-top: -50px;">
+        <video width="55%" height="auto" controls autoplay>
+          <source src="{% static 'reviewapp/videos/sample.mp4' %}" type="video/mp4">
+          <source src="{% static 'reviewapp/videos/sample.webm' %}" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+    
 </div>
 
-<!--ERROR-->
+
 <div id="none-found">
     <div class="alert alert-primary" role="alert">
         No restaurants found.
     </div>
 </div>
 
-<!--RESTAURANTS LIST-->
+
 <div id="restaurants-list-wrapper">
     <div id="restaurants-list">
     </div>
 </div>
 
-<!--SAMPLE RESTAURANT-->    
+   
 <div id="newRestaurant" class="card restaurant-card shadow mb-4" style="display:none;">
     <a href="#">
         <div class="restaurant-image">
@@ -44,13 +52,15 @@
 </div>
 
 
-<!--CSS & JS-->
+
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'reviewapp/style/home.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'reviewapp/style/hom.css' %}" />
 {% load static %}
 <script src="{% static "reviewapp/js/home.js" %}"></script>
 
 <script>
     getRestaurants(0);
 </script>
+
+
 {% endblock %}
