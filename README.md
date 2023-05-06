@@ -64,8 +64,8 @@ Le fichier urls.py contient également les chemins pour chacune de ces vues.
 6-Lancez le serveur : python manage.py runserver
 
 ## Auteur
-Khalil LAAZIZI
-Marouane LAMSAOUI
+Khalil LAAZIZI/
+Marouane LAMSAOUI/
 Oussama Lamkhantar
 
 
