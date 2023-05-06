@@ -56,7 +56,7 @@ GetRestaurantsByCategory : Vue pour récupérer tous les restaurants dans une ca
 Le fichier urls.py contient également les chemins pour chacune de ces vues.
 
 ## Lancement du projet et Installation
-1-Clonez le dépôt GitHub : git clone https://github.com/soulohabdellah/Application-location-voitures-django.git
+1-Clonez le dépôt GitHub : git clone https://github.com/Khalillaazizi/restaurant-recommendation.git
 2-Installer Python, Django (et Anaconda prompt si vous utilisez Windows)
 3-Configurez votre environnement python
 4-Installez les dépendances requises : pip install -r requirements.txt
