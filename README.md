@@ -63,5 +63,10 @@ Le fichier urls.py contient également les chemins pour chacune de ces vues.
 5-Appliquez les migrations pour la base de données : python manage.py migrate
 6-Lancez le serveur : python manage.py runserver
 
+## Auteur
+Khalil LAAZIZI
+Marouane LAMSAOUI
+Oussama Lamkhantar
+
 
 
