@@ -65,8 +65,7 @@ Le fichier urls.py contient également les chemins pour chacune de ces vues.
 
 ## Auteur
 Khalil LAAZIZI/
-Marouane LAMSAOUI/
-Oussama Lamkhantar
+
 
 
 
